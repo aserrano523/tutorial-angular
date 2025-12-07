@@ -54,6 +54,7 @@
                         <li><a href="#instalacion">Instalación</a></li>
                         <li><a href="#primeros-pasos">Primeros pasos</a></li>
                         <li><a href="#uso-framework">Uso del framework</a></li>
+                        <li><a href="#despliegue">Despliegue en GitHub Pages</a></li>
                         <li><a href="#conclusiones">Conclusiones</a></li>
                     </ul>
                 </nav>
@@ -1204,6 +1205,142 @@
                 </p>
             </div>
 
+            <!-- DESPLIEGUE EN GITHUB PAGES -->
+            <div id="despliegue" class="entry__section">
+                <h2>Despliegue en GitHub Pages</h2>
+
+                <p>
+                    Una vez finalizada la aplicación, es habitual querer publicarla en línea para compartirla con otros usuarios o 
+                    simplemente para visualizarla en un entorno real de producción. Una de las formas más sencillas de desplegar 
+                    un proyecto Angular estático es mediante <strong>GitHub Pages</strong>, un servicio gratuito que permite alojar páginas 
+                    estáticas directamente desde un repositorio.
+                </p>
+
+                <p>
+                    En este apartado se explican paso a paso las acciones necesarias para preparar el proyecto, compilarlo y 
+                    desplegarlo correctamente en GitHub Pages, asegurando que el enrutado interno y los recursos estáticos funcionan 
+                    de manera adecuada.
+                </p>
+
+                <h3>1. Preparar el repositorio en GitHub</h3>
+
+                <p>
+                    El primer paso consiste en crear un repositorio vacío en GitHub y sincronizarlo con el proyecto Angular local. 
+                    Esto se hace desde la terminal con los siguientes comandos (solo la primera vez):
+                </p>
+
+                <pre><code ngNonBindable>
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin https://github.com/TU_USUARIO/tutorial-angular.git
+git push -u origin main
+                </code></pre>
+
+                <p>
+                    Una vez subidos los archivos, el repositorio queda listo para recibir el despliegue.
+                </p>
+
+                <h3>2. Instalar la herramienta <em>gh-pages</em></h3>
+
+                <p>
+                    GitHub Pages requiere que el contenido generado por Angular (carpeta <code>dist/</code>) se publique dentro de una rama 
+                    específica llamada <code>gh-pages</code>. La forma más cómoda de hacerlo es instalando la utilidad 
+                    <strong>gh-pages</strong>, que automatiza este proceso:
+                </p>
+
+                <pre><code ngNonBindable>
+npm install --save-dev gh-pages
+                </code></pre>
+
+                <p>
+                    Este paso se realiza solo una vez en todo el proyecto.
+                </p>
+
+                <h3>3. Compilar el proyecto para producción</h3>
+
+                <p>
+                    GitHub Pages aloja la aplicación en una ruta que coincide con el nombre del repositorio. En este caso, como el 
+                    repositorio se llama <strong>tutorial-angular</strong>, es necesario indicar un <code>base-href</code> específico en el momento de la 
+                    compilación. De lo contrario, la aplicación no podrá encontrar sus propios recursos al cargarse desde GitHub Pages.
+                </p>
+
+                <p>
+                    Para generar la versión final, ejecutamos:
+                </p>
+
+                <pre><code ngNonBindable>
+ng build --output-path dist/tutorial-angular --base-href="/tutorial-angular/"
+                </code></pre>
+
+                <p>
+                    Esto creará el contenido listo para producción dentro de:
+                </p>
+
+                <pre><code ngNonBindable>dist/tutorial-angular/browser/</code></pre>
+
+                <h3>4. Publicar el contenido en la rama <code>gh-pages</code></h3>
+
+                <p>
+                    Una vez compilada la aplicación, se procede a desplegarla en GitHub Pages mediante el siguiente comando:
+                </p>
+
+                <pre><code ngNonBindable>
+npx gh-pages -d dist/tutorial-angular/browser
+                </code></pre>
+
+                <p>
+                    Este comando crea (o actualiza) automáticamente una rama llamada <strong>gh-pages</strong> y sube allí todos los archivos 
+                    necesarios para ejecutar la aplicación.
+                </p>
+
+                <h3>5. Configurar GitHub Pages en el repositorio</h3>
+
+                <p>
+                    Aunque, en principio, la configuración de GitHub Pages en el repositorio se realiza de forma automática, 
+                    siempre conviene revisar que todo esta en orden:
+                </p>
+
+                <ul>
+                    <li>Ir a <strong>Settings → Pages</strong></li>
+                    <li>En <strong>Source</strong>, seleccionar: <em>Deploy from a branch</em></li>
+                    <li>En <strong>Branch</strong>, elegir: <code>gh-pages</code></li>
+                    <li>En <strong>Folder</strong>, seleccionar: <code>/(root)</code></li>
+                </ul>
+
+                <p>
+                    Tras unos segundos, GitHub generará una URL pública similar a:
+                </p>
+
+                <p><strong>https://tu-usuario.github.io/tutorial-angular/</strong></p>
+
+                <p>
+                    Desde ese momento, la aplicación Angular estará disponible en Internet y podrá compartirse, enlazarse y visualizarse 
+                    desde cualquier dispositivo sin necesidad de servidor backend.
+                </p>
+
+                <h3>6. Actualizar el despliegue tras realizar cambios</h3>
+
+                <p>
+                    Si se realizan modificaciones en el proyecto y se desea volver a publicarlo, únicamente hay que repetir los pasos:
+                </p>
+
+                <ol>
+                    <li>Ejecutar nuevamente la compilación con <code>ng build</code>.</li>
+                    <li>Volver a ejecutar <code>npx gh-pages -d dist/tutorial-angular/browser</code>.</li>
+                </ol>
+
+                <p>
+                    El contenido de la página se actualizará automáticamente manteniendo siempre la URL de GitHub Pages.
+                </p>
+
+                <p>
+                    Con estos pasos, el proyecto queda completamente desplegado y accesible para cualquier usuario externo, demostrando 
+                    cómo Angular puede integrarse fácilmente con plataformas gratuitas de publicación como GitHub Pages.
+                </p>
+            </div>
+
             <!-- CONCLUSIONES -->
             <div id="conclusiones" class="entry__section">
                 <h2>Conclusiones</h2>
@@ -1330,8 +1467,9 @@
                 <p>
                     En definitiva, este proyecto permite comprender de forma práctica cómo funciona Angular y cómo 
                     se construye una aplicación web utilizando un enfoque profesional. El resultado final es un sitio web  
-                    completamente funcional, estilizada y desplegable en GitHub Pages, que demuestra cómo integrar diseño, 
-                    desarrollo y documentación en un proyecto real.
+                    completamente funcional, estilizado, y además desplegado en GitHub Pages, lo que demuestra la 
+                    capacidad de llevar una aplicación moderna desde su fase inicial de desarrollo hasta un entorno real de 
+                    producción.
                 </p>
 
                 <p>

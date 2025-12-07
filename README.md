@@ -1,59 +1,159 @@
-# TutorialAngular
+# 🅰️ Tutorial Angular — Proyecto de ejemplo
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.1.
+Este proyecto es una **aplicación Angular minimalista** desarrollada como apoyo didáctico para aprender los fundamentos del framework: instalación, estructura, componentes standalone, enrutado y despliegue en GitHub Pages.
+Incluye dos páginas (`Tutorial` y `About`) y un diseño adaptado a partir de la plantilla **Spurgeon Template** para ofrecer una apariencia profesional tipo artículo técnico.
 
-## Development server
+---
 
-To start a local development server, run:
+## Tecnologías utilizadas
 
-```bash
-ng serve
+* **Angular 17+** (con componentes *standalone*)
+* **TypeScript**
+* **HTML5 + CSS3**
+* **Spurgeon Template** (adaptada)
+* **Node.js + npm**
+* **gh-pages** para despliegue estático
+
+---
+
+## Estructura principal del proyecto
+
+```
+tutorial-angular/
+├── angular.json
+├── package.json
+├── tsconfig.json
+│
+├── src/
+│   ├── index.html
+│   ├── main.ts
+│   ├── styles.css
+│   │
+│   ├── app/
+│   │   ├── app.config.ts
+│   │   ├── app.routes.ts
+│   │   ├── app.ts
+│   │   ├── app.html
+│   │   ├── app.css
+│   │   └── pages/
+│   │       ├── tutorial/
+│   │       │   ├── tutorial.ts
+│   │       │   ├── tutorial.html
+│   │       │   └── tutorial.css
+│   │       └── about/
+│   │           ├── about.ts
+│   │           ├── about.html
+│   │           └── about.css
+│   │
+│   └── assets/
+│       └── spurgeon/
+│           ├── images/
+│           ├── main.js
+│           ├── plugins.js
+│           ├── spurgeon-custom.css
+│           ├── styles.css
+│           └── vendor.css
+│
+└── ...
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## Características principales
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Componentes standalone
 
-```bash
-ng generate component component-name
+El proyecto utiliza exclusivamente **componentes standalone**, simplificando la arquitectura y eliminando la necesidad de módulos (`NgModule`).
+
+### Enrutado básico
+
+Se definen dos rutas en `app.routes.ts`:
+
+```ts
+{ path: '', component: Tutorial },
+{ path: 'about', component: About },
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### Integración de plantilla externa
 
-```bash
-ng generate --help
+La plantilla **Spurgeon** se ha incorporado en `assets/spurgeon/` y adaptado mediante:
+
+* Limpieza y reorganización de CSS
+* Creación de `spurgeon-custom.css` con overrides
+* Uso de la fuente **Poppins** frente a las originales Castoro / Inter
+
+### Bloques de código seguros
+
+Todos los ejemplos del tutorial usan:
+
+```html
+<pre><code ngNonBindable> ... </code></pre>
 ```
 
-## Building
+para evitar errores de compilación como **NG5002** debido a caracteres no escapados.
 
-To build the project run:
+---
 
-```bash
-ng build
+## Scripts disponibles
+
+### Servir en desarrollo
+
+```
+ng serve -o
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+### Generar build de producción
 
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
+```
+ng build --output-path dist/tutorial-angular --base-href="/tutorial-angular/"
 ```
 
-## Running end-to-end tests
+---
 
-For end-to-end (e2e) testing, run:
+## Despliegue en GitHub Pages
 
-```bash
-ng e2e
+### 1. Instalar `gh-pages` (una sola vez)
+
+```
+npm install --save-dev gh-pages
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+### 2. Compilar con el `base-href` correcto
 
-## Additional Resources
+```
+ng build --output-path dist/tutorial-angular --base-href="/tutorial-angular/"
+```
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### 3. Publicar en GitHub Pages
+
+```
+npx gh-pages -d dist/tutorial-angular/browser
+```
+
+Después, en GitHub:
+
+**Settings → Pages → Branch: `gh-pages` → Folder: `/ (root)`**
+
+---
+
+## Requisitos previos
+
+* Node.js (v18 o superior recomendado)
+* npm
+* Angular CLI
+
+  ```
+  npm install -g @angular/cli
+  ```
+
+---
+
+## Autor
+
+Proyecto desarrollado por **Antonio Serrano** como demostración práctica para un tutorial de introducción a Angular.
+
+---
+
+## Licencia
+
+Este proyecto se distribuye bajo licencia **MIT**.
