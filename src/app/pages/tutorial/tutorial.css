@@ -1,0 +1,70 @@
+/* ==========================================
+   tutorial.css
+   Estilos locales específicos del componente Tutorial.
+   /* ==========================================
+       tutorial.css
+       Estilos locales específicos del componente Tutorial.
+   
+       NOTA: Este componente usa la plantilla Spurgeon,
+       por lo que la mayoría de estilos están en:
+       - src/assets/spurgeon/styles.css (plantilla base)
+       - src/assets/spurgeon/spurgeon-custom.css (overrides)
+   
+       Usa este archivo SOLO para estilos específicos de este
+       componente que no afecten a otras partes de la app.
+   ========================================== */
+
+   /* Placeholder para estilos futuros específicos del tutorial */
+
+
+   /* Table of Contents (TOC) styles */
+   html { scroll-behavior: smooth; }
+
+   .entry__toc {
+      max-width: 820px;
+      margin: 1.25rem auto;
+      padding: 0.6rem;
+      border-radius: 8px;
+      background: rgba(40, 183, 251, 0.06);
+      text-align: center;
+   }
+
+   .entry__toc h3 {
+      margin: 0 0 0.35rem 0;
+      font-size: 1rem;
+      font-weight: 600;
+   }
+
+   .entry__toc ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+   }
+
+   .entry__toc a {
+      display: inline-block;
+      padding: 0.35rem 0.6rem;
+      border-radius: 999px;
+      background: #ffffff;
+      border: 1px solid rgba(11, 111, 182, 0.06);
+      color: #0b6fb6;
+      text-decoration: none;
+      font-size: 0.95rem;
+   }
+
+   .entry__toc a:hover,
+   .entry__toc a:focus {
+      background: #28B7FB;
+      color: #ffffff;
+      border-color: #28B7FB;
+   }
+
+   @media (max-width: 520px) {
+      .entry__toc { padding: 0.5rem; }
+      .entry__toc a { font-size: 0.9rem; padding: 0.3rem 0.5rem; }
+   }
+

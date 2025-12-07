@@ -1,0 +1,1357 @@
+<!-- HEADER -->
+<!-- MINI TOPBAR CON LOGO Y NAVEGACIÓN -->
+<header class="mini-topbar">
+    <a routerLink="/" class="mini-topbar__logo">
+        <img src="assets/spurgeon/images/logoV2.png" alt="Home">
+    </a>
+    <nav class="mini-topbar__nav">
+        <a routerLink="/about" class="mini-topbar__link">Sobre mí</a>
+    </nav>
+</header>
+
+
+<!-- HERO HEADER -->
+<section class="s-pageheader s-pageheader--single">
+    <div class="row">
+        <div class="column large-full">
+            <h1 class="page-title">
+                Comenzando una aplicación web moderna de Angular
+            </h1>
+
+            <div class="page-subtitle">
+                <div class="subtitle-row">
+                    <span class="date">📅 08/12/2025</span>
+                    <span class="author">👤 <strong>Antonio Serrano</strong></span>
+                </div>
+                <div class="subtitle-row">
+                    <span class="category">📚 Actividad 2 - Desarrollo de Aplicaciones en Red - UNIR</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<section class="s-content s-content--single">
+
+    <div class="row s-content__primary">
+
+        <article class="column large-full entry format-standard">
+
+            <!-- IMAGEN DE PORTADA -->
+            <div class="entry__cover">
+                <img src="assets/spurgeon/images/tutorial-cover-1.avif" alt="Portada del tutorial">
+            </div>
+
+            <!-- TABLE OF CONTENTS -->
+            <div class="entry__toc" aria-labelledby="toc-title">
+                <h3 id="toc-title">Contenido</h3>
+                <nav>
+                    <ul>
+                        <li><a href="#introduccion">Introducción</a></li>
+                        <li><a href="#video">Videotutorial</a></li>
+                        <li><a href="#justificacion">Justificación</a></li>
+                        <li><a href="#instalacion">Instalación</a></li>
+                        <li><a href="#primeros-pasos">Primeros pasos</a></li>
+                        <li><a href="#uso-framework">Uso del framework</a></li>
+                        <li><a href="#conclusiones">Conclusiones</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- INTRODUCCIÓN -->
+            <div id="introduccion" class="entry__section">
+            <h2>Introducción</h2>
+
+            <p>
+                Angular es uno de los <strong>frameworks más consolidados y completos</strong> para el desarrollo de aplicaciones web modernas. 
+                Creado y mantenido por Google, destaca por su <strong>arquitectura basada en componentes</strong>, su integración nativa con 
+                TypeScript y un ecosistema diseñado para construir aplicaciones escalables, fiables y fáciles de mantener.
+            </p>
+
+            <p>
+                En un panorama donde conviven numerosas alternativas como React, Vue, Svelte o Solid, Angular sigue ocupando un lugar 
+                relevante gracias a su enfoque <strong>“todo en uno”</strong>. No es solo una biblioteca de interfaz, sino un framework completo 
+                que ofrece herramientas integradas para enrutado, formularios, inyección de dependencias, internacionalización, 
+                compilación, testing y optimización del rendimiento, sin depender de docenas de librerías externas.
+            </p>
+
+            <p>
+                Este tutorial tiene como objetivo servir de <strong>guía práctica y accesible</strong> para cualquier persona que desee aprender 
+                Angular desde cero: desde la instalación del entorno hasta la creación de páginas con diseño profesional basada 
+                en una plantilla real. El enfoque es progresivo y orientado a la práctica: cada sección introduce un concepto y lo 
+                acompaña de ejemplos concretos, comandos, fragmentos de código y explicaciones claras.
+            </p>
+
+            <p>
+                Uno de los cambios más importantes en la evolución reciente de Angular es su transición hacia un modelo más 
+                ligero y moderno gracias a los <strong>componentes standalone</strong>, el nuevo enrutado simplificado y APIs de rendimiento 
+                como <em>signals</em>, el modo <em>zoneless</em> o las mejoras en <em>hydration</em> para aplicaciones más rápidas.  
+                En este tutorial se utiliza exclusivamente la sintaxis recomendada en las versiones modernas del framework, 
+                evitando patrones heredados como <code>NgModule</code>, que aunque siguen funcionando, ya no son la metodología preferida.
+            </p>
+
+            <p>
+                A lo largo del tutorial aprenderás a:
+            </p>
+
+            <ul>
+                <li> <strong>Instalar Node.js, npm y Angular CLI</strong> correctamente.</li>
+                <li> <strong>Crear un proyecto Angular moderno</strong> desde cero.</li>
+                <li> <strong>Comprender su estructura interna</strong> y el papel de cada archivo.</li>
+                <li> <strong>Trabajar con componentes standalone</strong> y plantillas HTML.</li>
+                <li> <strong>Configurar rutas internas</strong> y navegación.</li>
+                <li> <strong>Integrar estilos externos y plantillas completas</strong> sin romper la estructura del framework.</li>
+                <li> <strong>Insertar código, multimedia y elementos interactivos</strong> en una página Angular.</li>
+                <li> <strong>Desplegar la aplicación</strong> en un entorno real como GitHub Pages.</li>
+            </ul>
+
+            <p>
+                En definitiva, este documento está pensado para cualquiera que quiera adentrarse en Angular de manera rápida, 
+                práctica y con un ejemplo real que puede utilizar como base en futuros proyectos.  
+                Si nunca has trabajado con Angular, o si lo has intentado y te ha parecido complejo, este tutorial te 
+                acompañará paso a paso para que puedas dominar sus fundamentos sin dificultad.
+            </p>
+        </div>
+
+            <!-- VIDEO TUTORIAL -->
+            <div id="video" class="entry__section">
+                <h2>Videotutorial</h2>
+
+                <p>
+                    A continuación puedes ver el vídeo explicativo que acompaña este tutorial,
+                    donde se muestra paso a paso cómo instalar Angular, crear un proyecto,
+                    estructurar componentes y desplegar la aplicación.
+                </p>
+
+                <div class="video-wrapper">
+                    <iframe 
+                        src="https://www.youtube.com/embed/XXXXXXXX"
+                        title="Comenzando una aplicación web moderna de Angular"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            
+            <!-- JUSTIFICACIÓN -->
+            <div id="justificacion" class="entry__section">
+            <h2>Justificación</h2>
+
+            <p>
+                Elegir un framework para desarrollar aplicaciones web modernas no es una decisión trivial. 
+                El ecosistema JavaScript actual ofrece numerosas alternativas, como las ya mencionadas de 
+                React, Vue, Svelte o Solid, entre muchas otras. Cada una de ellos tiene su propia filosofía 
+                y curva de aprendizaje. Sin embargo, en numerosos escenarios profesionales resulta 
+                especialmente ventajoso apostar por <strong>Angular</strong>. No solo por su madurez, sino 
+                por el conjunto de herramientas integradas que ofrece desde el primer momento y que 
+                permiten desarrollar interfaces complejas manteniendo siempre una estructura clara, estable 
+                y escalable.
+            </p>
+
+            <p>
+                Angular destaca por su <strong>arquitectura coherente orientada a componentes</strong>, 
+                por su <strong>modelo de desarrollo estructurado</strong> y por un enfoque “<em>baterías 
+                incluidas</em>” que reduce drásticamente la dependencia de librerías externas. Esto permite 
+                que tanto desarrolladores principiantes como equipos avanzados puedan trabajar con mayor 
+                previsibilidad y consistencia, algo que en proyectos reales marca una diferencia notable.
+            </p>
+
+            <p>
+                Además, el framework proporciona de forma nativa un conjunto de capacidades que en otros 
+                entornos deben añadirse manualmente, tales como: sistema de enrutado integrado, herramientas que 
+                facilitan la gestión del estado mediante servicios y APIs reactivas como RxJS o Signals, 
+                validaciones de formularios, directivas reutilizables, inyección de dependencias, utilidades 
+                para comunicación entre componentes, animaciones, internacionalización y un CLI muy potente que 
+                automatiza tareas frecuentes. Todo ello hace que Angular actúe como un <strong>ecosistema completo 
+                para el desarrollo de Single Page Applications (SPAs)</strong>, esto es, aplicaciones web que 
+                cargan una sola página HTML y actualizan dinámicamente el contenido en el navegador a medida que 
+                el usuario interactúa, sin necesidad de recargar la página completa.
+            </p>
+
+            <p>
+                La llegada de los <strong>componentes standalone</strong> marcó un punto de inflexión. Esta 
+                evolución simplifica enormemente la estructura interna de los proyectos, elimina la necesidad 
+                de depender de módulos tradicionales (<code>NgModule</code>) y ofrece una experiencia de 
+                desarrollo más ligera y moderna. Junto con nuevas APIs como <em>signals</em> o el modo 
+                <em>zoneless</em>, Angular se ha reinventado para ajustarse a las tendencias actuales de alto 
+                rendimiento y simplicidad conceptual.
+            </p>
+
+            <p>
+                En términos prácticos, Angular es especialmente valioso cuando se buscan aplicaciones capaces 
+                de crecer durante años sin perder cohesión. Su diseño favorece:
+            </p>
+
+            <ul>
+                <li><strong>Escalabilidad real</strong> gracias a una estructura modular bien definida.</li>
+                <li><strong>Mantenibilidad</strong> en equipos grandes y distribuidos.</li>
+                <li><strong>Fiabilidad</strong> en proyectos de larga duración.</li>
+                <li><strong>Estabilidad</strong> de la API y un ciclo de actualizaciones predecible.</li>
+            </ul>
+
+            <p>
+                No es casualidad que Angular siga siendo uno de los frameworks preferidos en sectores como 
+                la banca, la administración pública, la ingeniería, las telecomunicaciones o las grandes 
+                empresas tecnológicas. Su robustez y su conjunto de herramientas internas lo convierten en 
+                una opción sólida para proyectos donde la consistencia y la escalabilidad son prioritarias.
+            </p>
+
+            <p>
+                También resulta especialmente interesante para quienes buscan adquirir una comprensión sólida 
+                del desarrollo web moderno. Angular obliga a pensar en términos de <strong>organización del 
+                código</strong>, <strong>separación de responsabilidades</strong>, <strong>arquitecturas 
+                escalables</strong> y <strong>patrones de diseño</strong>, elementos clave para crecer como 
+                desarrollador web. El framework fomenta buenas prácticas desde el primer día: tipado fuerte, 
+                claridad estructural, modularidad y un enfoque declarativo que ayuda a mantener el control 
+                sobre proyectos complejos.
+            </p>
+
+            <p>
+                Otro de sus puntos fuertes es la capacidad de integrar recursos externos, plantillas HTML, 
+                sistemas de diseño o bibliotecas de terceros sin comprometer la integridad del proyecto. En 
+                este tutorial, por ejemplo, Angular se combina con una plantilla editorial externa para 
+                construir un par de páginas elegantes, totalmente funcionales y perfectamente organizadas. 
+                Esto demuestra la flexibilidad del framework para adaptarse a distintos estilos visuales y 
+                necesidades de diseño sin perder su estructura interna.
+            </p>
+
+            <p>
+                Desde la perspectiva de la experiencia de usuario, Angular aporta mecanismos que mejoran la 
+                fluidez de las interfaces: detección eficiente de cambios, actualización reactiva del DOM, 
+                carga diferida de módulos, renderizado condicional optimizado, e incluso soporte nativo para 
+                server-side rendering e <em>hydration</em> cuando se requiere máxima velocidad en producción.
+            </p>
+
+            <p>
+                Pero quizás el aspecto más valioso sea que Angular permite abordar el desarrollo web como un 
+                <strong>proceso completo</strong> y no como un conjunto disperso de herramientas. Un proyecto 
+                Angular bien organizado es fácil de leer, fácil de mantener, fácil de extender y fácil de 
+                documentar. Esta coherencia interna es lo que hace que muchos equipos lo elijan como 
+                tecnología central para aplicaciones complejas, dashboards, CRMs, sistemas internos, paneles 
+                interactivos o plataformas empresariales.
+            </p>
+
+            <p>
+                En definitiva, Angular es una tecnología que combina solidez, madurez, estabilidad y un 
+                ecosistema completo para desarrollar aplicaciones web profesionales. Su estructura clara, su 
+                integración con TypeScript, su CLI avanzada y su enfoque modular lo convierten en una opción 
+                excelente tanto para quienes están comenzando como para quienes buscan evolucionar hacia 
+                proyectos de mayor escala. Por eso resulta una herramienta especialmente indicada para crear 
+                tutoriales, demos, aplicaciones experimentales o proyectos de producción que requieren un 
+                equilibrio entre diseño, organización interna y mantenibilidad a largo plazo.
+            </p>
+        </div>
+
+            <!-- INSTALACIÓN -->
+            <div id="instalacion" class="entry__section">
+                <h2>Instalación</h2>
+
+                <p>
+                    Antes de comenzar a trabajar con Angular es necesario preparar el entorno de desarrollo 
+                    instalando varias herramientas fundamentales: <strong>Node.js</strong>, <strong>npm</strong> y 
+                    la <strong>Angular CLI</strong>. Esta sección describe el proceso completo paso a paso, 
+                    especialmente orientado a usuarios de Windows 11, aunque el procedimiento es similar en otros 
+                    sistemas operativos.
+                </p>
+
+                <h3>1. Instalación de Node.js</h3>
+
+                <p>
+                    Angular se ejecuta sobre Node.js, por lo que el primer paso consiste en instalar su versión 
+                    recomendada. Para ello debemos acceder a la página oficial:
+                </p>
+
+                <p>
+                    <a href="https://nodejs.org" target="_blank">https://nodejs.org</a>
+                </p>
+
+                <p>
+                    Es importante descargar la versión etiquetada como <strong>LTS (Long Term Support)</strong>, 
+                    ya que es la más estable y la que mejor compatibilidad ofrece con frameworks como Angular.
+                </p>
+
+                <p>
+                    Una vez descargado el instalador, simplemente se deben seguir los pasos del asistente manteniendo 
+                    todas las opciones por defecto. Tras completar la instalación se puede comprobar que Node.js y npm 
+                    (el gestor de paquetes) se han instalado correctamente ejecutando los siguientes comandos en PowerShell:
+                </p>
+
+                <pre><code ngNonBindable><span class="cmd">node</span> -v
+<span class="cmd">npm</span> -v</code></pre>
+
+                <p>
+                    El primer comando muestra la versión instalada de Node.js y el segundo verifica npm.  
+                    Ambos deben devolver un número de versión y no un mensaje de error.
+                </p>
+
+                <h3>2. Configuración de PowerShell para permitir scripts</h3>
+
+                <p>
+                    En algunos casos, Windows muestra un error cuando se intenta ejecutar comandos como 
+                    <code>npm</code> o <code>ng</code> debido a la política de ejecución de PowerShell.  
+                    Para solucionarlo, basta con ejecutar PowerShell <strong>como administrador</strong> e introducir:
+                </p>
+
+                <pre><code ngNonBindable><span class="cmd">Set-ExecutionPolicy</span> <span class="str">RemoteSigned</span></code></pre>
+
+                <p>
+                    Tras confirmar la operación, PowerShell permitirá ejecutar scripts necesarios para trabajar con 
+                    Angular sin comprometer la seguridad del sistema.
+                </p>
+
+                <h3>3. Instalación de Angular CLI</h3>
+
+                <p>
+                    Angular CLI es la herramienta oficial que permite crear proyectos, generar componentes, 
+                    realizar compilaciones y ejecutar la aplicación en modo desarrollo. Su instalación se realiza 
+                    mediante npm con el siguiente comando:
+                </p>
+
+                <pre><code ngNonBindable><span class="cmd">npm</span> <span class="kw">install</span> <span class="op">-g</span> <span class="str">@angular/cli</span></code></pre>
+
+                <p>
+                    El parámetro <code>-g</code> indica que la instalación se realiza de forma global, permitiendo 
+                    usar Angular CLI desde cualquier carpeta del equipo.  
+                    Una vez completado el proceso, es posible comprobar su correcta instalación con:
+                </p>
+
+                <pre><code ngNonBindable><span class="cmd">ng</span> <span class="kw">version</span></code></pre>
+
+                <p>
+                    Este comando no solo muestra la versión de Angular CLI, sino también las versiones instaladas de 
+                    Node, npm y otros paquetes relevantes.
+                </p>
+
+                <h3>4. Creación del proyecto Angular</h3>
+
+                <p>
+                    Una vez instalado todo lo necesario, es momento de crear el proyecto que servirá como base para el 
+                    tutorial. Desde la carpeta donde se desee trabajar (por ejemplo, dentro de los documentos del grado), 
+                    se ejecuta:
+                </p>
+
+                <pre><code ngNonBindable><span class="cmd">ng</span> <span class="kw">new</span> <span class="str">tutorial-angular</span> <span class="op">--routing</span> <span class="op">--style</span>=<span class="str">css</span></code></pre>
+
+                <p>
+                    Las opciones utilizadas tienen el siguiente significado:
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>--routing</strong>  
+                        Indica que deseamos una aplicación con sistema de enrutado desde el inicio.
+                    </li>
+                    <li>
+                        <strong>--style=css</strong>  
+                        Especifica que los estilos del proyecto usarán CSS en lugar de SASS u otros lenguajes.
+                    </li>
+                </ul>
+
+                <p>
+                    Al ejecutar este comando, Angular CLI hará varias preguntas adicionales relacionadas con analítica 
+                    opcional o con la habilitación de características modernas como SSR o hydration.  
+                    Para este proyecto se puede seleccionar <strong>No</strong> para todas ellas.
+                </p>
+
+                <p>
+                    Una vez generados los archivos, se puede acceder al directorio del proyecto:
+                </p>
+
+                <pre><code ngNonBindable><span class="cmd">cd</span> <span class="str">tutorial-angular</span></code></pre>
+
+                <h3>5. Ejecución de la aplicación en modo desarrollo</h3>
+
+                <p>
+                    Angular CLI permite iniciar un servidor local que recarga automáticamente la aplicación cada vez 
+                    que se modifica un archivo. Para ejecutarlo basta con escribir:
+                </p>
+
+                <pre><code ngNonBindable><span class="cmd">ng</span> <span class="kw">serve</span></code></pre>
+
+                <p>
+                    Tras unos segundos, en la consola aparecerá un mensaje indicando que la aplicación está disponible en:
+                </p>
+
+                <p>
+                    <strong>http://localhost:4200</strong>
+                </p>
+
+                <p>
+                    Si el navegador no se abre automáticamente, pueden escribir la dirección manualmente.  
+                    A partir de aquí, cualquier cambio en el código se reflejará de inmediato en la página.
+                </p>
+
+                <h3>6. Consideraciones sobre rutas y carpetas en Windows 11</h3>
+
+                <p>
+                    Durante el desarrollo de este proyecto surgieron algunos problemas derivados del uso de carpetas 
+                    sincronizadas con servicios como iCloud Drive o OneDrive.  
+                    Este tipo de carpetas pueden provocar bloqueos, archivos sin sincronizar, conflictos de permisos 
+                    y errores con Angular CLI.
+                </p>
+
+                <p>  
+                    La recomendación general es trabajar en rutas locales como:
+                </p>
+
+                <pre><code ngNonBindable><span class="str">C:\Users\TuUsuario\Documents\</span></code></pre>
+
+                <p>
+                    Esto garantiza que no haya errores extraños relacionados con sincronización o bloqueo de archivos.
+                </p>
+
+                <h3>7. Reparación de errores comunes encontrados durante el proyecto</h3>
+
+                <p>
+                    Durante el desarrollo real de este tutorial surgieron varios errores típicos que vale la pena 
+                    documentar para futuros aprendices de Angular:
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>Error: "npm.ps1 cannot be loaded because running scripts is disabled"</strong><br>
+                        ➜ Solución: ejecutar PowerShell como administrador y usar  
+                        <code>Set-ExecutionPolicy RemoteSigned</code>.
+                    </li>
+
+                    <li>
+                        <strong>Error: módulos no encontrados tras generar componentes</strong><br>
+                        ➜ Solución: entender que Angular 17 crea componentes <em>standalone</em> sin sufijo "component".  
+                        Asegurarse de que los imports coinciden con los nombres reales.
+                    </li>
+
+                    <li>
+                        <strong>Error al compilar después de borrar archivos de SSR</strong><br>
+                        ➜ Solución: eliminar correctamente <code>main.server.ts</code> y referencias internas en 
+                        <code>angular.json</code>.
+                    </li>
+
+                    <li>
+                        <strong>Error NG5002 relacionado con "unescaped brace"</strong><br>
+                        ➜ Solución: escapar todos los bloques de código insertados en <code>&lt;pre&gt;&lt;code&gt;</code> 
+                        con entidades HTML.
+                    </li>
+                </ul>
+
+                <p>
+                    Con estos pasos completados, el entorno queda totalmente preparado para comenzar a crear la estructura 
+                    del proyecto, generar componentes, personalizar la plantilla y construir el tutorial completo. En la 
+                    siguiente sección veremos cómo se organiza internamente un proyecto Angular y cuáles son sus elementos 
+                    fundamentales.
+                </p>
+            </div>
+
+            <!-- PRIMEROS PASOS -->
+            <div id="primeros-pasos" class="entry__section">
+                <h2>Primeros pasos</h2>
+
+                <p>
+                    Una vez instalado Angular CLI y creado el proyecto base, el siguiente objetivo consiste en comprender
+                    la estructura inicial que genera el framework y familiarizarse con los archivos más importantes del
+                    proyecto. Esta sección explica paso a paso cómo se organiza un proyecto Angular moderno, cómo se
+                    ejecuta y cómo comenzar a trabajar con componentes y rutas. Se empleará siempre la sintaxis
+                    correspondiente a la última versión del framework a día de hoy, que es Angular 21, y que actualmente
+                    se encuentra en fase de Soporte Activo (Active Support).
+                </p>
+
+                <h3>1. Estructura inicial generada por Angular</h3>
+
+                <p>
+                    Tras ejecutar el comando de creación del proyecto:
+                </p>
+
+                <pre><code ngNonBindable><span class="cmd">ng</span> <span class="kw">new</span> <span class="str">tutorial-angular</span> <span class="op">--routing</span> <span class="op">--style</span>=<span class="str">css</span></code></pre>
+
+                <p>
+                    Angular CLI genera una estructura organizada que sirve como punto de partida para cualquier aplicación.
+                    Una versión simplificada de esa estructura es la siguiente:
+                </p>
+
+                <pre><code ngNonBindable>tutorial-angular/
+├── angular.json
+├── package.json
+├── package-lock.json
+├── tsconfig.json
+├── tsconfig.app.json
+├── tsconfig.spec.json
+├── README.md
+├── .editorconfig
+├── .gitignore
+│
+├── src/
+│   ├── index.html
+│   ├── main.ts
+│   ├── styles.css
+│   │
+│   ├── app/
+│   │   ├── app.config.ts
+│   │   ├── app.routes.ts
+│   │   ├── app.ts
+│   │   ├── app.html
+│   │   ├── app.css
+│   │   └── app.spec.ts
+│   │
+│   │   └── pages/ ← (vacía por el momento, para páginas futuras)
+│   │
+│   └── assets/
+│       └── ...
+│
+└── ...</code></pre>
+
+                <p>
+                    Cada uno de los archivos creados por Angular tiene una responsabilidad concreta dentro del proyecto:
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>angular.json</strong>: archivo de configuración del workspace. Define cómo se compila, construye, sirve y testea la aplicación.
+                    </li>
+                    <li>
+                        <strong>package.json</strong>: contiene las dependencias del proyecto y los scripts de ejecución.
+                    </li>
+                    <li>
+                        <strong>package-lock.json</strong>: registra las versiones exactas instaladas de cada dependencia.
+                    </li>
+                    <li>
+                        <strong>tsconfig.json</strong>: configuración general de TypeScript.
+                    </li>
+                    <li>
+                        <strong>tsconfig.app.json</strong>: configuración TypeScript específica para el código de la aplicación (carpeta <code>src</code>).
+                    </li>
+                    <li>
+                        <strong>tsconfig.spec.json</strong>: configuración usada para tests unitarios.
+                    </li>
+                    <li>
+                        <strong>.editorconfig</strong>: define reglas de indentación y formato para todos los editores.
+                    </li>
+                    <li>
+                        <strong>.gitignore</strong>: indica a Git qué archivos y carpetas deben ignorarse.
+                    </li>
+
+                    <li>
+                        <strong>src/main.ts</strong>: punto de entrada de la aplicación. Inicializa la configuración definida en <code>app.config.ts</code>.
+                    </li>
+                    <li>
+                        <strong>src/index.html</strong>: documento HTML principal que aloja el componente raíz.
+                    </li>
+                    <li>
+                        <strong>src/styles.css</strong>: hoja de estilos global del proyecto.
+                    </li>
+
+                    <li>
+                        <strong>app.config.ts</strong>: archivo que define la configuración principal de la aplicación (providers, router, etc.). Sustituye al antiguo <em>AppModule</em>.
+                    </li>
+                    <li>
+                        <strong>app.routes.ts</strong>: archivo donde se declaran todas las rutas de la aplicación.
+                    </li>
+                    <li>
+                        <strong>app.ts</strong>: componente raíz de la aplicación (standalone).
+                    </li>
+                    <li>
+                        <strong>app.html</strong>: plantilla HTML del componente raíz.
+                    </li>
+                    <li>
+                        <strong>app.css</strong>: estilos del componente raíz.
+                    </li>
+                    <li>
+                        <strong>app.spec.ts</strong>: tests unitarios del componente raíz.
+                    </li>
+
+                    <li>
+                        <strong>Componentes en src/app/pages</strong>: aquí añadiremos las distintas secciones o páginas del tutorial (por ejemplo, <em>Home</em>, <em>About</em> o <em>Tutorial</em>).
+                    </li>
+                </ul>
+
+                <p>
+                    Este orden permite trabajar de forma clara y modular, facilitando las futuras ampliaciones del proyecto.
+                </p>
+
+                <h3>2. El componente raíz y el arranque de la aplicación</h3>
+
+                <p>
+                    Angular utiliza un enfoque basado en componentes. La aplicación completa no es más que un conjunto
+                    jerárquico de componentes que se combinan para formar la interfaz final.  
+                    Tras la simplificación de Angular moderno (sin módulos NgModule necesarios), el sistema de arranque es 
+                    muy limpio y sencillo. Así, en <code>main.ts</code>, Angular arranca la aplicación cargando el componente raíz indicado en 
+                    la configuración <code>app.config.ts</code>. De ahí en adelante, los componentes hijos gestionan el
+                    resto de la interfaz.
+                </p>
+
+                <p>
+                    A efectos prácticos, el desarrollador solo necesita comprender que la aplicación comienza en 
+                    <strong>AppComponent</strong> (<code>app.ts</code>) o su equivalente, y que cada componente posterior se encargará de una 
+                    sección específica.
+                </p>
+
+                <h3>3. Generación de un nuevo componente</h3>
+
+                <p>
+                    Angular CLI facilita enormemente la creación de componentes. Basta con usar el comando:
+                </p>
+
+                <pre><code ngNonBindable><span class="cmd">ng</span> <span class="kw">generate</span> <span class="kw">component</span> <span class="str">pages/ejemplo</span></code></pre>
+
+                <p>
+                    En nuestro caso, el contenido principal del tutorial se organizará en un único componente llamado 
+                    <strong>Tutorial</strong>, que representará una página de estilo artículo. Para generarlo utilizamos:
+                </p>
+
+                <pre><code ngNonBindable><span class="cmd">ng</span> <span class="kw">generate</span> <span class="kw">component</span> <span class="str">pages/tutorial</span></code></pre>
+
+                <p>
+                    Sin embargo, en las versiones modernas del framework (desde Angular v17) los componentes son 
+                    <strong>standalone</strong>, es decir, ya no dependen de un módulo, lo que elimina el archivo 
+                    <code>*.module.ts</code>. 
+                    Angular continúa recomendando el sufijo <code>.component.</code> para mantener claridad en la estructura,
+                    pero gracias al uso de plantillas y estilos <strong>inline</strong>, ahora es posible que un componente
+                    se defina en un único archivo.
+                </p>
+
+                <p>
+                    Esto significa que un componente generado bajo las buenas prácticas modernas (Single File Component)
+                    podría tener esta estructura:
+                </p>
+
+                <pre><code ngNonBindable><span class="str">tutorial.component.ts</span>
+<span class="com">// Contiene la lógica, la plantilla (template) y los estilos (styles)</span></code></pre>
+
+                <p>
+                    <strong>Nota:</strong> Si se decide utilizar archivos separados para el HTML y los estilos, 
+                    la estructura tradicional sigue siendo válida:
+                </p>
+
+                <pre><code ngNonBindable><span class="str">tutorial.component.ts</span>
+<span class="str">tutorial.component.html</span>
+<span class="str">tutorial.component.css</span></code></pre>
+
+                <p>
+                    En este proyecto concreto, se ha decidido prescindir del sufijo <code>.component.</code> 
+                    en todos los archivos por comodidad. Así, el componente principal será <strong>Tutorial</strong>, 
+                    que contendrá el contenido del documento siguiendo el estilo de un artículo extenso, similar a 
+                    los que se publican en plataformas como Medium.
+                </p>
+                
+                <p>
+                    Además, se incluirá una segunda página llamada <strong>Sobre mí</strong>, 
+                    utilizada para probar el sistema de enrutamiento(<em>routing</em>) y mostrar 
+                    información del autor.
+                </p>
+
+                <pre><code ngNonBindable><span class="cmd">ng</span> <span class="kw">generate</span> <span class="kw">component</span> <span class="str">pages/about</span></code></pre>
+                
+                <p>
+                    Por tanto, la estructura del proyecto quedará así en este punto:
+                </p>
+
+                <pre><code ngNonBindable>tutorial-angular/
+├── angular.json
+├── package.json
+├── package-lock.json
+├── tsconfig.json
+├── tsconfig.app.json
+├── tsconfig.spec.json
+├── README.md
+├── .editorconfig
+├── .gitignore
+│
+├── src/
+│   ├── index.html
+│   ├── main.ts
+│   ├── styles.css
+│   │
+│   ├── app/
+│   │   ├── app.config.ts
+│   │   ├── app.routes.ts
+│   │   ├── app.ts
+│   │   ├── app.html
+│   │   ├── app.css
+│   │   └── app.spec.ts
+│   │
+│   │   └── pages/
+│   │       ├── about/
+│   │       │   ├── about.component.ts
+│   │       │   ├── about.component.html
+│   │       │   ├── about.component.css
+│   │       │   └── about.component.spec.ts
+│   │       │
+│   │       └── tutorial/
+│   │           ├── tutorial.component.ts
+│   │           ├── tutorial.component.html
+│   │           ├── tutorial.component.css
+│   │           └── tutorial.component.spec.ts
+│   │
+│   └── assets/
+│       └── ...
+│
+└── ...</code></pre>
+
+                <h3>4. Uso del servidor de desarrollo</h3>
+
+                <p>
+                    Durante este proyecto, se utiliza constantemente el servidor local de Angular, que recarga la aplicación
+                    automáticamente cada vez que se modifica un archivo. Para iniciarlo, basta con ejecutar:
+                </p>
+
+                <pre><code ngNonBindable>ng serve</code></pre>
+
+                <p>
+                    Esto abrirá la aplicación en el puerto 4200 de localhost, accesible en el navegador mediante:
+                </p>
+
+                <p><strong>http://localhost:4200</strong></p>
+
+                <p>
+                    Así, basta con hacer clic con el ratón en dicha URL en el cmd/terminal mientras presionamos 
+                    la tecla Ctrl para visualizar inmediatamente en el navegador el sitio web en construcción. 
+                    En efecto, uno de los aspectos más útiles del servidor de desarrollo es este <em>live reload</em>, 
+                    ya que no es necesario reiniciar Angular cuando se modifican plantillas HTML, archivos CSS o 
+                    componentes TypeScript. La página se actualiza automáticamente en cuestión de milisegundos.
+                </p>
+
+                <h3>5. Entendiendo el enrutado inicial</h3>
+
+                <p>
+                    Angular permite asignar rutas internas a distintos componentes, creando aplicaciones
+                    multipágina sin necesidad de recargar el navegador. En este proyecto, en lugar de utilizar
+                    únicamente una ruta principal, definimos dos rutas básicas:
+                </p>
+
+                <ul>
+                    <li>
+                        La ruta raíz <code>/</code>, que muestra el componente <strong>Tutorial</strong>,
+                        encargado de renderizar el contenido completo del documento como si fuese un blog
+                        de una única entrada.
+                    </li>
+                    <li>
+                        La ruta <code>/about</code>, que carga el componente <strong>About</strong>, una página
+                        "Sobre mí" sencilla utilizada para mostrar información del autor y para probar el sistema de
+                        enrutamiento.
+                    </li>
+                </ul>
+
+                <p>
+                    La configuración se define en <code>app.routes.ts</code> y queda de la siguiente forma:
+                </p>
+
+                <pre><code ngNonBindable>
+<span class="kw">import</span> &#123; <span class="str">Routes</span> &#125; <span class="kw">from</span> <span class="str">'@angular/router'</span>;
+<span class="kw">import</span> &#123; <span class="str">Tutorial</span> &#125; <span class="kw">from</span> <span class="str">'./pages/tutorial/tutorial'</span>;
+<span class="kw">import</span> &#123; <span class="str">About</span> &#125; <span class="kw">from</span> <span class="str">'./pages/about/about'</span>;
+
+<span class="kw">export const</span> <span class="cmd">routes</span>: <span class="str">Routes</span> = [
+    &#123; <span class="attr">path</span>: <span class="str">''</span>,       <span class="attr">component</span>: <span class="str">Tutorial</span> &#125;,
+    &#123; <span class="attr">path</span>: <span class="str">'about'</span>, <span class="attr">component</span>: <span class="str">About</span>    &#125;
+];
+                </code></pre>
+
+                <p>
+                    De esta manera, al acceder a la raíz (<code>/</code>) se muestra el tutorial completo, 
+                    mientras que al visitar <code>/about</code> se visualiza la página de información personal.
+                    Ambos componentes son independientes y se cargan mediante enrutamiento nativo de Angular,
+                    manteniendo la fluidez de la navegación sin recargar la página.
+                </p>
+
+                <h3>6. Adaptación de la plantilla Spurgeon al proyecto Angular</h3>
+
+                <p>
+                    Una parte esencial de todo sitio web es sin duda la apariencia del mismo, el cual debe 
+                    transmitir profesionalidad y coherencia visual. En esta ocasión, para dar un aspecto 
+                    atractivo y moderno al tutorial, se ha optado por utilizar la popular plantilla HTML 
+                    gratuita <strong>Spurgeon Template</strong>. Esta plantilla destaca por su diseño limpio,
+                    minimalista y enfocado en la legibilidad, características ideales para un artículo técnico
+                    como el que se presenta en este tutorial. Este proceso no se limita únicamente a copiar 
+                    archivos, sino que requiere una integración cuidadosa dentro de la arquitectura Angular.
+                </p>
+
+                <h4>6.1. Integración inicial de la plantilla</h4>
+
+                <p>Para incorporar la plantilla se realizaron los siguientes pasos:</p>
+
+                <ul>
+                    <li>Copia de los archivos originales de la plantilla (<em>vendor.css</em>, <em>styles.css</em>, scripts e imágenes) en la carpeta <code>src/assets/spurgeon/</code>.</li>
+                    <li>
+                        Adaptación del archivo <em>index.html</em> para cargar correctamente las fuentes de Google Fonts utilizadas por la plantilla. 
+                        Además, aunque Spurgeon utiliza originalmente las familias <strong>Castoro</strong> (serif) e <strong>Inter</strong> (sans-serif), 
+                        en este proyecto se sustituyeron por <strong>Poppins</strong>, una tipografía más redondeada y moderna que mejora la legibilidad 
+                        y encaja mejor con el estilo visual del tutorial.
+                    </li>
+                    <li>Modificación de <code>angular.json</code> para incluir los estilos externos en el proceso de compilación.</li>
+                    <li>Creación del archivo <code>spurgeon-custom.css</code> para centralizar todas las modificaciones y overrides necesarios.</li>
+                </ul>
+
+                <p>
+                    Con estos pasos, la aplicación Angular adopta la estética de la plantilla sin alterar el núcleo del framework
+                    ni interferir con la estructura de componentes.
+                </p>
+
+                <h4>6.2. Limpieza y reorganización de estilos</h4>
+
+                <p>
+                    Una vez integrada la plantilla fue necesario realizar un proceso de depuración para que los estilos externos 
+                    no generasen conflictos con Angular. Esta fase incluyó:
+                </p>
+
+                <ul>
+                    <li>Eliminar reglas globales redundantes o superpuestas dentro de la plantilla.</li>
+                    <li>Mover resets, tipografías base y normalizaciones al archivo <code>src/styles.css</code>, respetando la arquitectura por defecto de Angular.</li>
+                    <li>Mantener <code>styles.css</code> de la plantilla como referencia intacta, evitando modificar código original salvo en casos estrictamente necesarios.</li>
+                    <li>Definir <code>spurgeon-custom.css</code> como lugar centralizado para los overrides (ajustes de espaciado, tipografía, comportamiento de bloques de código, layout del footer, etc.).</li>
+                    <li>Limpiar y limitar <code>tutorial.css</code> de la página Tutorial para que solo contenga reglas específicas del artículo (TOC, columnas internas, ajustes locales).</li>
+                </ul>
+
+                <h4>6.3. Ajustes visuales y control de bloques de código</h4>
+
+                <p>
+                    Debido a que el tutorial incluye numerosos ejemplos de código, fue necesario realizar ajustes importantes 
+                    sobre los elementos <code>&lt;pre&gt;</code> y <code>&lt;code&gt;</code>:
+                </p>
+
+                <ul>
+                    <li>Escapar etiquetas HTML dentro de los bloques <code>&lt;pre&gt;&lt;code ngNonBindable&gt;</code> para evitar que el navegador intente procesarlas.</li>
+                    <li>Neutralizar fondos y paddings heredados de la plantilla para poder aplicar un estilo uniforme desde los overrides.</li>
+                    <li>Introducir un sistema de clases sintácticas (.cmd, .kw, .str, .num, .cmt, .tag, .attr, .val) con el fin de mejorar la legibilidad en los ejemplos de código.</li>
+                </ul>
+
+                <h4>6.4. Mapeo final de responsabilidades CSS</h4>
+
+                <p>A modo de resumen, cada archivo CSS del proyecto cumple una responsabilidad concreta:</p>
+
+                <ul>
+                    <li><code>src/styles.css</code>: estilos globales y resets (tipografía, tamaños base, normalizaciones).</li>
+                    <li><code>src/assets/spurgeon/styles.css</code>: archivo original de la plantilla (no se modifica).</li>
+                    <li><code>src/assets/spurgeon/spurgeon-custom.css</code>: overrides y ajustes visuales aplicados a la plantilla.</li>
+                    <li><code>src/app/pages/tutorial/tutorial.css</code>: estilos locales del componente Tutorial.</li>
+                </ul>
+
+                <p>
+                    Gracias a esta estructura, la plantilla externa se mantiene como una dependencia clara y modular, mientras 
+                    que Angular conserva intacta su arquitectura interna. Esto facilita el mantenimiento, la escalabilidad y la 
+                    actualización futura tanto del proyecto como de la propia plantilla.
+                </p>
+
+                <p>
+                    Por último, la estructura definitiva de los archivos y carpetas con la plantilla de Spurgeon ya 
+                    integrada quedaría como sigue:
+                </p>
+
+                <pre><code ngNonBindable>tutorial-angular/
+├── angular.json
+├── package.json
+├── package-lock.json
+├── tsconfig.json
+├── tsconfig.app.json
+├── tsconfig.spec.json
+├── README.md
+├── .editorconfig
+├── .gitignore
+│
+├── src/
+│   ├── index.html
+│   ├── main.ts
+│   ├── styles.css
+│   │
+│   ├── app/
+│   │   ├── app.config.ts
+│   │   ├── app.routes.ts
+│   │   ├── app.ts
+│   │   ├── app.html
+│   │   ├── app.css
+│   │   └── app.spec.ts
+│   │
+│   │   └── pages/
+│   │       ├── tutorial/
+│   │       │   ├── tutorial.component.ts
+│   │       │   ├── tutorial.component.html
+│   │       │   ├── tutorial.component.css
+│   │       │   └── tutorial.component.spec.ts
+│   │       │
+│   │       └── about/
+│   │           ├── about.component.ts
+│   │           ├── about.component.html
+│   │           ├── about.component.css
+│   │           └── about.component.spec.ts
+│   │
+│   └── assets/
+│       └── spurgeon/
+│           ├── images/
+│           ├── main.js
+│           ├── plugins.js
+│           ├── spurgeon-custom.css
+│           ├── styles.css
+│           └── vendor.css
+│
+└── ...</code></pre>
+
+                <p>
+                    Una vez comprendidos estos primeros pasos, el desarrollador que ha ido siguiendo este 
+                    tutorial ya está preparado para profundizar en los elementos fundamentales del 
+                    framework: componentes standalone, directivas, data binding, enrutado, servicios, 
+                    formularios y las bases de la arquitectura interna de Angular. La siguiente sección 
+                    desarrolla estos conceptos con ejemplos prácticos adaptados al proyecto.
+                </p>
+            </div>
+
+            <!-- USO DEL FRAMEWORK -->
+            <div id="uso-framework" class="entry__section">
+                <h2>Uso del framework</h2>
+
+                <p>
+                    En esta sección se profundiza en los elementos fundamentales de Angular que permiten estructurar una
+                    aplicación moderna. Aunque el tutorial actual consiste en dos páginas (una de tipo artículo y otra 
+                    de tipo about o "Sobre mí"), el conocimiento descrito aquí es perfectamente aplicable a proyectos 
+                    reales con múltiples vistas, formularios, comunicación entre componentes y servicios que manejan 
+                    datos remotos.
+                </p>
+
+                <p>
+                    Angular es un framework “baterías incluidas”, lo que significa que incorpora de forma nativa herramientas
+                    que en otras bibliotecas hay que añadir manualmente, tales como componentes,
+                    directivas, data binding, servicios, enrutado, inyección de dependencias, formularios
+                    reactivos, etc.
+                </p>
+
+                <h3>1. Componentes: la unidad básica de Angular</h3>
+
+                <p>
+                    Los componentes son la pieza central de Angular. Cada componente define una parte de la interfaz y está
+                    formado por tres elementos principales:
+                </p>
+
+                <ul>
+                    <li><strong>Un archivo TypeScript</strong> que controla la lógica.</li>
+                    <li><strong>Una plantilla HTML</strong> que define la vista.</li>
+                    <li><strong>Una hoja CSS</strong> opcional para estilos locales.</li>
+                </ul>
+
+                <p>
+                    Un componente standalone moderno utiliza la siguiente estructura (se muestra con las llaves escapadas 
+                    para evitar errores en Angular):
+                </p>
+
+                <pre><code ngNonBindable>
+<span class="cmt">// src/app/pages/tutorial/tutorial.ts</span>
+
+<span class="kw">import</span> &#123; <span class="str">Component</span> &#125; <span class="kw">from</span> <span class="str">'@angular/core'</span>;
+
+@<span class="str">Component</span>(&#123;
+<span class="attr">selector</span>: <span class="str">'app-tutorial'</span>,
+<span class="attr">standalone</span>: <span class="kw">true</span>,
+<span class="attr">templateUrl</span>: <span class="str">'./tutorial.html'</span>,
+<span class="attr">styleUrl</span>: <span class="str">'./tutorial.css'</span>,
+&#125;)
+<span class="kw">export</span> <span class="kw">class</span> <span class="str">Tutorial</span> &#123;
+<span class="attr">today</span> = <span class="kw">new</span> <span class="str">Date</span>().<span class="cmd">toLocaleDateString</span>();
+&#125;
+</code></pre>
+
+                <p>
+                    El decorador <code>@Component</code> indica que esta clase representa un componente de Angular.
+                    La propiedad <code>standalone: true</code> se utiliza en versiones más modernas de Angular para 
+                    evitar el uso de módulos tradicionales (<em>NgModule</em>), simplificando considerablemente la 
+                    estructura del proyecto.
+                </p>
+
+                <h3>2. Data Binding: cómo Angular conecta la vista y la lógica</h3>
+
+                <p>
+                    Angular permite enlazar valores entre el componente y la plantilla HTML. Este proceso se conoce como 
+                    <strong>data binding</strong> y existen varias formas de hacerlo dependiendo del flujo de datos:
+                </p>
+
+                <ul>
+                    <li><strong>Interpolación</strong> (de TypeScript hacia HTML): 
+                        <code ngNonBindable>&#123;&#123; valor &#125;&#125;</code>
+                    </li>
+
+                    <li><strong>Binding de propiedades</strong>: 
+                        <code ngNonBindable>[propiedad]="valor"</code>
+                    </li>
+
+                    <li><strong>Binding de eventos</strong>: 
+                        <code ngNonBindable>(click)="accion()"</code>
+                    </li>
+
+                    <li><strong>Two-way binding</strong> (o vinculación de doble vía) con <code>ngModel</code>:
+                        <code ngNonBindable>[(ngModel)]="valor</code>
+                    </li>
+                </ul>
+
+                <p>
+                    Un ejemplo ilustrativo de la vinculación de datos a través de la interpolación y el uso de 
+                    eventos sería la siguiente:
+                </p>
+
+                <pre><code ngNonBindable>
+<span class="cmt">&lt;!-- Template HTML --&gt;</span>
+&lt;<span class="tag">p</span>&gt;La fecha de hoy es: &#123;&#123; <span class="cmd">today</span> &#125;&#125;&lt;/<span class="tag">p</span>&gt;
+&lt;<span class="tag">button</span> <span class="attr">(click)</span>=<span class="str">"incrementar()"</span>&gt;Incrementar&lt;/<span class="tag">button</span>&gt;
+&lt;<span class="tag">p</span>&gt;Contador: &#123;&#123; <span class="cmd">contador</span> &#125;&#125;&lt;/<span class="tag">p</span>&gt;
+
+<span class="cmt">// TypeScript del componente</span>
+<span class="attr">contador</span> = <span class="num">0</span>;
+
+<span class="cmd">incrementar</span>() &#123;
+<span class="kw">this</span>.<span class="attr">contador</span>++;
+&#125;
+</code></pre>
+
+                <p>
+                    De esta manera, Angular actualiza automáticamente la vista cuando cambia el estado 
+                    del componente. Esta capacidad reactiva convierte a Angular en una opción ideal 
+                    para interfaces interactivas y paneles dinámicos.
+                </p>
+
+                <h3>3. Directivas: modifican el comportamiento del DOM</h3>
+
+                <p>
+                    Las directivas son instrucciones que Angular añade al HTML para modificar su estructura o comportamiento.
+                    Existen tres tipos principales:
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>Componentes</strong>: técnicamente son directivas con plantilla asociada. Definen bloques completos 
+                        de interfaz y son la base de cualquier aplicación Angular.
+                    </li>
+                    <li>
+                        <strong>Directivas estructurales</strong>: alteran la estructura del DOM añadiendo o eliminando elementos.  
+                        Ej.: <code>*ngIf</code>, <code>*ngFor</code>, <code>*ngSwitch</code>.
+                    </li>
+                    <li>
+                        <strong>Directivas de atributo</strong>: modifican la apariencia o el comportamiento de un elemento existente.  
+                        Ej.: <code>[ngStyle]</code>, <code>[ngClass]</code>, <code>ngModel</code>.
+                    </li>
+                </ul>
+
+                <p>
+                    Un ejemplo de directiva estructural sería:
+                </p>
+
+                <pre><code ngNonBindable>
+&lt;<span class="tag">ul</span>&gt;
+&lt;<span class="tag">li</span> <span class="attr">*ngFor</span>=<span class="str">"let item of elementos"</span>&gt;
+    &#123;&#123; <span class="cmd">item</span> &#125;&#125;
+&lt;/<span class="tag">li</span>&gt;
+&lt;/<span class="tag">ul</span>&gt;
+                </code></pre>
+
+                <p>
+                    Esta sintaxis permite generar listas dinámicas de forma declarativa.
+                </p>
+
+                <h3>4. Sistema de enrutado</h3>
+
+                <p>
+                    Angular integra un router completo capaz de gestionar múltiples vistas dentro de una misma aplicación
+                    sin necesidad de recargar la página. En este proyecto no solo se utiliza el componente principal 
+                    <strong>Tutorial</strong>, sino también una segunda página llamada <strong>Sobre mí</strong> con una 
+                    breve descripción del perfil del autor del sitio web. Este par de páginas sirve como ejemplo práctico 
+                    para ilustrar el funcionamiento del enrutado moderno en Angular.
+                </p>
+
+                <p>
+                    Las rutas se definen en un archivo dedicado:
+                </p>
+
+                <pre><code ngNonBindable>
+<span class="cmt">// src/app/app.routes.ts</span>
+
+<span class="kw">import</span> &#123; <span class="str">Routes</span> &#125; <span class="kw">from</span> <span class="str">'@angular/router'</span>;
+<span class="kw">import</span> &#123; <span class="str">Tutorial</span> &#125; <span class="kw">from</span> <span class="str">'./pages/tutorial/tutorial'</span>;
+<span class="kw">import</span> &#123; <span class="str">About</span> &#125; <span class="kw">from</span> <span class="str">'./pages/about/about'</span>;
+
+<span class="kw">export</span> <span class="kw">const</span> <span class="cmd">routes</span>: <span class="str">Routes</span> = [
+    &#123; <span class="attr">path</span>: <span class="str">''</span>,       <span class="attr">component</span>: <span class="str">Tutorial</span> &#125;,
+    &#123; <span class="attr">path</span>: <span class="str">'about'</span>, <span class="attr">component</span>: <span class="str">About</span>    &#125;
+];
+                </code></pre>
+
+                <p>
+                    De esta forma, cuando el usuario accede a la ruta raíz (<code>/</code>), se muestra el contenido completo del 
+                    tutorial. Al navegar a <code>/about</code>, se carga la página de información personal del autor.
+                </p>
+
+                <p>
+                    En caso de que en el futuro se quisieran añadir nuevas secciones (como una página de contacto, galería o 
+                    cualquier otra vista), bastaría con incluir rutas adicionales tales como:
+                </p>
+
+                <pre><code ngNonBindable>
+&#123; <span class="attr">path</span>: <span class="str">'contacto'</span>, <span class="attr">component</span>: <span class="str">Contacto</span> &#125;,
+&#123; <span class="attr">path</span>: <span class="str">'galeria'</span>,  <span class="attr">component</span>: <span class="str">Galeria</span>  &#125;,
+                </code></pre>
+
+                <p>
+                    El sistema de navegación funciona sin recargar la página, incluso en despliegues como GitHub Pages, siempre 
+                    que se configure correctamente la redirección de rutas.
+                </p>
+
+                <h3>5. Servicios e inyección de dependencias</h3>
+
+                <p>
+                    Aunque este proyecto no incluye comunicación con APIs ni lógica compartida entre componentes, sí es 
+                    importante comprender cómo funcionan los servicios en Angular. En efecto, el framework proporciona 
+                    un mecanismo muy potente para encapsular lógica y compartir datos entre componentes: los 
+                    <strong>servicios</strong>.
+                </p>
+
+                <p>
+                    La filosofía de Angular se basa en la <strong>inyección de dependencias (DI)</strong>, un patrón que permite 
+                    que distintas partes de la aplicación reciban objetos ya configurados sin necesidad de crearlos manualmente.
+                </p>
+
+                <p>
+                    A modo ilustrativo, un servicio sencillo podría tener esta forma:
+                </p>
+
+                <pre><code ngNonBindable>
+<span class="cmt">// Servicio sencillo para ilustrar la inyección de dependencias</span>
+
+<span class="kw">import</span> &#123; <span class="str">Injectable</span> &#125; <span class="kw">from</span> <span class="str">'@angular/core'</span>;
+
+@<span class="str">Injectable</span>(&#123; <span class="attr">providedIn</span>: <span class="str">'root'</span> &#125;)
+<span class="kw">export</span> <span class="kw">class</span> <span class="str">DatosService</span> &#123;
+
+<span class="cmd">obtenerMensaje</span>() &#123;
+    <span class="kw">return</span> <span class="str">'Hola desde el servicio'</span>;
+&#125;
+
+&#125;
+</code></pre>
+
+                <p>
+                    Y se utilizaría así en un componente:
+                </p>
+
+                <pre><code ngNonBindable>
+<span class="cmd">constructor</span>(<span class="kw">private</span> <span class="attr">datos</span>: <span class="str">DatosService</span>) &#123;&#125;
+
+<span class="attr">mensaje</span> = <span class="kw">this</span>.<span class="attr">datos</span>.<span class="cmd">obtenerMensaje</span>();
+</code></pre>
+
+                <p>
+                    Gracias a este patrón, Angular es especialmente adecuado para aplicaciones grandes donde múltiples 
+                    componentes dependen de la misma información.
+                </p>
+
+                <h3>6. Formularios</h3>
+
+                <p>
+                    Angular dispone de dos sistemas de formularios: 
+                </p>
+
+                <ul>
+                    <li><strong>Formularios template-driven</strong>: más simples, ideales para formularios pequeños.</li>
+                    <li><strong>Formularios reactivos</strong>: más potentes, basados en código TypeScript.</li>
+                </ul>
+
+                <p>
+                    Un ejemplo básico de formulario reactivo sería:
+                </p>
+
+                <pre><code ngNonBindable>
+<span class="cmt">// Ejemplo de formulario reactivo con FormGroup y FormControl</span>
+
+<span class="kw">import</span> &#123; <span class="str">FormControl</span>, <span class="str">FormGroup</span> &#125; <span class="kw">from</span> <span class="str">'@angular/forms'</span>;
+
+<span class="attr">formulario</span> = <span class="kw">new</span> <span class="str">FormGroup</span>(&#123;
+<span class="attr">nombre</span>: <span class="kw">new</span> <span class="str">FormControl</span>(<span class="str">''</span>),
+<span class="attr">email</span>: <span class="kw">new</span> <span class="str">FormControl</span>(<span class="str">''</span>),
+&#125;);
+
+<span class="cmd">enviar</span>() &#123;
+<span class="cmd">console.log</span>(<span class="kw">this</span>.<span class="attr">formulario</span>.<span class="attr">value</span>);
+&#125;
+</code></pre>
+
+                <p>
+                    Este tipo de formularios permite validar datos, reaccionar a cambios y crear interfaces complejas con 
+                    un control total sobre el estado.
+                </p>
+
+                <h3>7. Conexión entre HTML, CSS y TypeScript</h3>
+
+                <p>
+                    Angular separa claramente las responsabilidades entre lógica (TypeScript), estructura (HTML) y presentación
+                    (CSS), pero lo hace de forma perfectamente integrada. Esta arquitectura evita problemas comunes en proyectos
+                    grandes, como tener lógica mezclada dentro del HTML o estilos que afectan a partes no deseadas de la app.
+                </p>
+
+                <p>
+                    En este tutorial se emplea además la plantilla externa Spurgeon Template anteriormente descrita, lo que 
+                    demuestra lo flexible que puede ser Angular para incorporar recursos de terceros sin perder su estructura interna.
+                </p>
+
+                <h3>8. Buenas prácticas aplicadas durante este tutorial</h3>
+
+                <ul>
+                    <li>Uso exclusivo de <strong>componentes standalone</strong>, recomendados por Angular en sus versiones más 
+                        modernas.</li>
+                    <li>Separación estricta entre contenido, estilos y lógica.</li>
+                    <li>Uso de rutas mínimas pero claras.</li>
+                    <li>Estructura ordenada en carpetas <code>pages/</code>.</li>
+                    <li>Sanitización del código en bloques <code>&lt;pre&gt;&lt;code&gt;</code> para evitar errores NG5002.</li>
+                    <li>Evitar nombres de archivo duplicados o inconsistentes con el CLI.</li>
+                </ul>
+
+                <p>
+                    Con estos conceptos, el lector de este tutorial ya está preparado para comprender la mecánica interna de 
+                    Angular y afrontar desarrollos más complejos. En la siguiente sección se expondrán los errores 
+                    encontrados y las soluciones aplicadas, además de una explicación final que contextualiza el aprendizaje 
+                    realizado.
+                </p>
+            </div>
+
+            <!-- CONCLUSIONES -->
+            <div id="conclusiones" class="entry__section">
+                <h2>Conclusiones</h2>
+
+                <p>
+                    Este proyecto ha servido como una oportunidad para explorar Angular desde cero y construir 
+                    un sitio web real utilizando una plantilla profesional. Partiendo de cero 
+                    conocimientos sobre Angular y con una experiencia más o menos limitada en desarrollo web 
+                    más allá de ciertos conocimientos HTML, CSS y JavaScript, se espera que el proceso de 
+                    creación de este tutorial haya permitido comprender de forma progresiva cómo funciona un 
+                    framework moderno de desarrollo frontend y cómo se estructura una aplicación real.
+                </p>
+
+                <p>
+                    En primer lugar, cabe destacar que Angular, pese a su aparente complejidad inicial, ofrece un 
+                    ecosistema muy completo que facilita enormemente la organización del código y la construcción 
+                    de interfaces profesionales. La sintaxis basada en TypeScript, los componentes standalone, el 
+                    sistema de enrutado integrado y la capacidad de escalar a proyectos grandes son factores 
+                    que convierten a Angular en una herramienta especialmente adecuada para el desarrollo web 
+                    orientado a aplicaciones más elaboradas.
+                </p>
+
+                <p>
+                    Durante el desarrollo del proyecto se han experimentado errores y situaciones reales que aparecen con 
+                    frecuencia tanto en entornos profesionales. Lejos de ser simples obstáculos, estos problemas 
+                    constituyen una parte esencial del aprendizaje y permiten comprender mejor las interacciones entre 
+                    Angular, las herramientas del sistema operativo y los estilos procedentes de plantillas externas. 
+                    Entre los más relevantes destacan:
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>Configuración de PowerShell</strong>: fue necesario habilitar la ejecución de scripts para
+                        permitir que Angular CLI funcionara correctamente en Windows.
+                    </li>
+
+                    <li>
+                        <strong>Componentes tradicionales vs. standalone</strong>: las versiones modernas de Angular generan 
+                        componentes sin módulos (<code>standalone: true</code>) y con estructuras de archivos simplificadas, 
+                        lo que inicialmente provocó confusiones con componentes de versiones anteriores.
+                    </li>
+
+                    <li>
+                        <strong>Error NG5002 por caracteres no escapados</strong>: al insertar ejemplos de código HTML dentro de
+                        plantillas, Angular intentó interpretarlos, lo que obligó a usar 
+                        <code>&lt;code ngNonBindable&gt;</code> y a escapar llaves y elementos estructurales.
+                    </li>
+
+                    <li>
+                        <strong>Conflictos con carpetas sincronizadas</strong> como iCloud u OneDrive, que bloquearon archivos
+                        temporales de Angular e impidieron la compilación adecuada.
+                    </li>
+
+                    <li>
+                        <strong>Ajustes necesarios al integrar la plantilla Spurgeon</strong>: la plantilla incluía reglas CSS muy 
+                        globales que afectaban directamente a márgenes, tipografía, espaciados, tamaños de encabezados y 
+                        comportamiento de bloques <code>&lt;pre&gt;</code>. Esto requirió una reorganización profunda de los 
+                        estilos:
+                        <ul>
+                            <li>Reubicación de resets y tipografías en <code>src/styles.css</code>.</li>
+                            <li>Centralización de overrides en <code>spurgeon-custom.css</code>.</li>
+                            <li>Unificación del aspecto de todos los encabezados mediante una regla global 
+                                <code>h1, h2, h3, h4, h5, h6 &#123; color: #0D5180 !important; &#125;</code>.
+                            </li>
+                            <li>Ajuste manual de tamaños para <code>h2</code>, <code>h3</code> y <code>h4</code> para obtener una 
+                                jerarquía visual coherente con el estilo del tutorial.
+                            </li>
+                            <li>Neutralización de estilos heredados de la plantilla en bloques de código para evitar fondos 
+                                duplicados y paddings excesivos.
+                            </li>
+                            <li>Reestructuración del estilo de <code>&lt;pre&gt;&lt;code&gt;</code> para controlar colores, sombras y 
+                                comportamiento responsivo.
+                            </li>
+                            <li>Resolución de conflictos de alineación vertical en la mini-topbar: centrado del enlace 
+                                “Sobre mí” y corrección del recorte superior del logo causado por imágenes sin margen interno.
+                            </li>
+                            <li>Centrado y espaciado uniforme de la fotografía de perfil en la página “About”, incluyendo 
+                                override de márgenes aplicados por la plantilla.
+                            </li>
+                            <li>Sustitución de las fuentes originales (<strong>Castoro</strong> e <strong>Inter</strong>) por 
+                                <strong>Poppins</strong>, más redondeada y adecuada para una lectura moderna.
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <strong>Advertencias de scripts externos</strong> al cargar los archivos de la plantilla Spurgeon, 
+                        que obligaron a revisar el orden de carga de <code>main.js</code> y <code>plugins.js</code>.
+                    </li>
+                </ul>
+
+                <p>
+                    Todos estos ajustes forman parte del proceso normal de adaptar una plantilla HTML estática a la 
+                    arquitectura de Angular, donde los estilos globales, los componentes independientes y las limitaciones 
+                    del DOM propio del framework requieren una integración cuidadosa. La resolución de estos problemas 
+                    permitió obtener una aplicación visualmente consistente, técnicamente ordenada y conforme a las buenas 
+                    prácticas del desarrollo moderno con Angular.
+                </p>
+
+                <h3>Aprendizaje sobre Angular y su ecosistema</h3>
+
+                <p>
+                    El tutorial también ayuda a entender conceptos esenciales del framework. En concreto:
+                </p>
+
+                <ul>
+                    <li>Cómo se estructuran los componentes y cómo se conectan con sus plantillas HTML.</li>
+                    <li>De qué manera funcionan el data binding y la actualización reactiva del DOM.</li>
+                    <li>Qué papel cumplen las directivas (<em>ngIf</em>, <em>ngFor</em>) dentro de la vista.</li>
+                    <li>Cómo se configuran y gestionan las rutas para crear aplicaciones con navegación interna.</li>
+                    <li>La importancia de los servicios y la inyección de dependencias en Angular moderno.</li>
+                    <li>El uso del CLI para generar, ejecutar y compilar proyectos de manera estructurada.</li>
+                </ul>
+
+                <p>
+                    Estos conceptos son especialmente valiosos porque representan la base sobre la que se construyen 
+                    aplicaciones web profesionales. Aunque el tutorial final consiste en dos páginas, el conocimiento 
+                    adquirido permite afrontar con confianza desarrollos más ambiciosos: CRUDs, paneles interactivos, 
+                    aplicaciones con formularios complejos, consumo de APIs REST, entre otros.
+                </p>
+
+                <h3>Conclusión final</h3>
+
+                <p>
+                    En definitiva, este proyecto permite comprender de forma práctica cómo funciona Angular y cómo 
+                    se construye una aplicación web utilizando un enfoque profesional. El resultado final es un sitio web  
+                    completamente funcional, estilizada y desplegable en GitHub Pages, que demuestra cómo integrar diseño, 
+                    desarrollo y documentación en un proyecto real.
+                </p>
+
+                <p>
+                    Se espera que el aprendizaje obtenido siente una base sólida para otros proyectos personales o 
+                    profesionales futuros que requieran el uso de frameworks modernos de desarrollo web. Angular, lejos de 
+                    ser una herramienta inaccesible, demuestra ser un framework robusto, coherente y perfectamente utilizable 
+                    por desarrolladores que están dando sus primeros pasos en el desarrollo frontend.
+                </p>
+            </div>
+        </article>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="s-footer">
+    <div class="s-footer__bottom">
+        <div class="ss-copyright">
+            <span>© 2025 Antonio Serrano</span>
+        </div>
+    </div>
+</footer>

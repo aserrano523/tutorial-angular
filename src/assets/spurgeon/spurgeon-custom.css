@@ -1,0 +1,495 @@
+/* ==========================================
+   CUSTOM OVERRIDES PARA SPURGEON TEMPLATE
+   Solo estilos específicos del tutorial Angular
+========================================== */
+
+/* Encabezados redondeados (Poppins) */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Poppins", sans-serif !important;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #0D5180 !important;
+}
+
+/* Título grande de la página */
+.page-title {
+    font-size: 3.5rem !important;
+    line-height: 1.25;
+    margin-bottom: 0.2rem;
+    letter-spacing: 0.03em;         /* subo el espaciado entre letras */
+}
+
+/* Subtítulo (fecha + autor + categoría) */
+.page-subtitle {
+    margin-top: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    align-items: center;
+}
+
+.subtitle-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    font-size: 0.95rem;
+    opacity: 0.9;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-subtitle span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.page-subtitle .category {
+    background: rgba(40, 183, 251, 0.15);
+    color: #28B7FB;
+    padding: 0.4rem 0.9rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* ==========================================
+   ESPACIADO ENTRE TÍTULO Y CONTENIDO
+========================================== */
+
+/* Hero superior (zona azul con el título) */
+.s-pageheader {
+    padding-top: 80px;          /* por el logo fijo */
+    padding-bottom: 0.4rem;     /* poco hueco debajo del hero */
+    margin-bottom: 0;           /* sin extra gap */
+}
+
+/* Contenedor principal debajo del hero */
+.s-content__primary {
+    margin-top: 0.5rem !important;
+    max-width: 100% !important;
+}
+
+/* Cada sección del artículo */
+.entry__section {
+    max-width: 820px;
+    margin: 0 auto 3rem auto;   /* separación normal entre secciones */
+    scroll-margin-top: 100px;
+}
+
+/* Imagen de portada del tutorial */
+.entry__cover {
+    max-width: 1000px;
+    margin: 1.6rem auto 1.2rem auto;
+    width: 100%;
+}
+
+.entry__cover img {
+    width: 100%;
+    height: auto;
+    max-height: 420px;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+@media screen and (max-width: 600px) {
+    .entry__cover img {
+        max-height: 240px;
+    }
+}
+
+/* La PRIMERA sección (“Introducción”) pegada al título */
+.entry__section:first-of-type {
+    margin-top: 0 !important;
+}
+
+/* ==========================================
+   PÁRRAFOS Y LISTAS
+========================================== */
+
+.entry__section p,
+.entry__section li {
+    font-size: 1.05rem;   /* aprox 18px, legible pero no gigante */
+    line-height: 1.7;
+}
+
+.entry__section p {
+    text-align: justify !important;
+    text-justify: inter-word;
+}
+
+.entry__section ul {
+    margin-left: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ==========================================
+   JERARQUÍA DE TÍTULOS DENTRO DEL ARTÍCULO
+========================================== */
+
+.s-content .entry__section h2,
+.s-content .column .entry__section h2,
+.entry.format-standard .entry__section h2,
+.entry__section h2,
+.article-container h2,
+.section h2,
+.entry h2 {
+    font-size: 1.9rem;
+    margin-top: 2.2rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 2px solid #eee;
+}
+
+.s-content .entry__section h3,
+.s-content .column .entry__section h3,
+.entry.format-standard .entry__section h3,
+.entry__section h3,
+.article-container h3,
+.section h3,
+.entry h3 {
+    font-size: 1.35rem;
+    margin-top: 1.6rem;
+    margin-bottom: 0.45rem;
+    font-weight: 600;
+}
+
+.s-content .entry__section h4,
+.s-content .column .entry__section h4,
+.entry.format-standard .entry__section h4,
+.entry__section h4,
+.article-container h4,
+.section h4,
+.entry h4 {
+    font-size: 1.18rem;
+    margin-top: 1.2rem;
+    margin-bottom: 0.35rem;
+    font-weight: 600;
+}
+
+/* ==========================================
+   CENTRADO REAL DE LA COLUMNA
+========================================== */
+
+.s-content--single .row {
+    display: flex;
+    justify-content: center;
+}
+
+.s-content--single .entry {
+    max-width: 820px;
+}
+
+/* ==========================================
+   LOGO DE LA MINI TOPBAR
+========================================== */
+
+.mini-topbar {
+    width: 100%;
+    height: 84px;
+    display: flex;
+    justify-content: space-between;   /* logo a la izquierda, nav a la derecha */
+    align-items: center;
+    padding: 0px 20px 0 20px;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    pointer-events: auto;
+}
+
+.mini-topbar__logo {
+    padding-top: 56px;
+    padding-bottom: 2px;
+    display: block;
+}
+
+.mini-topbar__logo img {
+    width: 90px;
+    height: auto;
+    display: block;
+}
+
+.mini-topbar__nav {
+    display: flex;
+    gap: 1.5rem;
+    align-items: stretch; 
+    pointer-events: auto;
+}
+
+.mini-topbar__link {
+    color: #0b6fb6;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent;
+    display: flex;
+    align-items: center;      /* centra el texto dentro del enlace "Sobre mí" */
+    padding: 0 0.75rem;       /* padding solo horizontal */
+    height: 100%; 
+}
+
+.mini-topbar__link:hover,
+.mini-topbar__link:focus {
+    color: #28B7FB;
+    border-bottom-color: #28B7FB;
+}
+
+/* ==========================================
+   OCULTAR EL MENÚ ORIGINAL DEL TEMPLATE
+========================================== */
+
+.s-header__nav-wrap,
+.s-header__menu-toggle {
+    display: none !important;
+}
+
+/* ==========================================
+   BLOQUES DE CÓDIGO BONITOS
+========================================== */
+
+pre code {
+    font-family: "Fira Code", monospace;
+    font-size: 0.9rem;
+    background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 100%);
+    color: #e0e0e0;
+    display: block;
+    padding: 1.2rem 1.5rem !important;
+    border-radius: 8px;
+    overflow-x: auto;
+    border: none;
+    white-space: pre;
+    line-height: 1.6;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para código inline: ajustar padding para que el recuadro
+   se adapte más al texto y no sea tan alto ni amplio. */
+code {
+    font-family: "Fira Code", monospace;
+    font-size: 0.95em;
+    background: #f5f5f5;
+    color: inherit;
+    padding: 0.08rem 0.36rem;
+    border-radius: 4px;
+    border: 1px solid #e6e6e6;
+    line-height: 1;
+    white-space: normal;
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+/* Eliminar borde/fondo gris del elemento pre */
+pre {
+    border: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+}
+
+
+/* Evitar que las reglas generales afecten a los bloques <pre><code> */
+pre code {
+    display: block !important;
+}
+
+/* ==========================================
+   COLORES DE SINTAXIS PARA CÓDIGO
+   Clases para resaltar diferentes tipos de tokens
+========================================== */
+
+/* Comandos y keywords */
+.cmd, .kw {
+    color: #61dafb;  /* Cyan */
+    font-weight: 500;
+}
+
+/* Strings y rutas */
+.str {
+    color: #a8e6cf;  /* Verde claro */
+}
+
+/* Números y valores */
+.num {
+    color: #ffa500;  /* Naranja */
+}
+
+/* Operadores y símbolos */
+.op {
+    color: #ff6b9d;  /* Rosa/Magenta */
+}
+
+/* Comentarios */
+.cmt {
+    color: #888;     /* Gris */
+    font-style: italic;
+}
+
+/* Tags HTML */
+.tag {
+    color: #f07178;  /* Rojo coral */
+}
+
+/* Atributos */
+.attr {
+    color: #ffcb8b;  /* Amarillo */
+}
+
+/* Valores de atributos */
+.val {
+    color: #a8e6cf;  /* Verde */
+}
+
+/* Vídeo responsive */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    margin: 2rem 0;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* ==========================================
+   AJUSTE DE ESPACIADO ENTRE PÁRRAFOS Y LISTAS
+   Aplicado a todos los partados/sections del tutorial
+   para reducir el espacio vertical entre <p> y listas
+   manteniendo una buena legibilidad.
+========================================== */
+.entry__section p,
+.s-content p,
+.article-container p,
+.section p,
+.entry p,
+article p,
+.column p {
+    margin-bottom: 0.9rem !important;
+}
+
+.entry__section ul,
+.entry__section ol,
+.s-content ul,
+.s-content ol,
+.article-container ul,
+.article-container ol,
+.section ul,
+.section ol,
+.entry ul,
+.entry ol,
+article ul,
+article ol,
+.column ul,
+.column ol {
+    margin-top: 0.5rem !important;
+    margin-bottom: 1rem !important;
+    padding-left: 1.2rem !important;
+}
+
+/* ==========================================
+   CORRECCIÓN DE VIÑETAS (SANGRÍA Y GAP)
+   Asegurar sangría visible y espacio entre marcador
+   y texto; aplicar a todas las listas del tutorial.
+========================================== */
+.entry__section ul,
+.entry__section ol,
+.s-content ul,
+.s-content ol,
+.article-container ul,
+.article-container ol,
+.section ul,
+.section ol,
+.entry ul,
+.entry ol,
+article ul,
+article ol,
+.column ul,
+.column ol {
+    list-style-position: outside !important;
+    padding-left: 1.9rem !important; /* espacio para el marcador + gap */
+}
+
+.entry__section li,
+.s-content li,
+.article-container li,
+.section li,
+.entry li,
+article li,
+.column li {
+    margin-bottom: 0.6rem !important; /* separación entre ítems */
+}
+
+/* Control fino del espacio entre marcador y texto */
+.entry__section li::marker,
+.s-content li::marker,
+.article-container li::marker,
+.section li::marker,
+.entry li::marker,
+article li::marker,
+.column li::marker {
+    font-size: 1rem;
+    color: #28B7FB;
+    margin-right: 0.55rem; /* hueco entre marcador y texto */
+}
+
+/* Fallback para navegadores sin soporte ::marker */
+.entry__section li,
+.article-container li,
+.section li {
+    padding-left: 0.6rem !important;
+    text-indent: -0.6rem !important;
+}
+
+.entry__section p + ul,
+.entry__section p + ol,
+.s-content p + ul,
+.s-content p + ol,
+.article-container p + ul,
+.article-container p + ol,
+.section p + ul,
+.section p + ol,
+.entry p + ul,
+.entry p + ol,
+article p + ul,
+article p + ol,
+.column p + ul,
+.column p + ol,
+.entry__section ul + p,
+.entry__section ol + p,
+.s-content ul + p,
+.s-content ol + p,
+.article-container ul + p,
+.article-container ol + p,
+.section ul + p,
+.section ol + p,
+.entry ul + p,
+.entry ol + p,
+article ul + p,
+article ol + p,
+.column ul + p,
+.column ol + p {
+    margin-top: 0.5rem !important;
+}
+
+/* ==========================================
+   FOOTER - Reducir altura
+========================================== */
+
+.s-footer {
+    padding-top: 2rem !important;
+    padding-bottom: 1.5rem !important;
+}
+
+/* Estilos para el texto del copyright del footer */
+.s-footer__bottom {
+    text-align: center !important;
+    font-size: 0.85rem !important;
+}

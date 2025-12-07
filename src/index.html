@@ -1,0 +1,36 @@
+<!--
+  index.html
+  Documento HTML raíz de la aplicación Angular.
+
+  Este archivo actúa como punto de entrada del proyecto en el navegador.
+  Su responsabilidad principal es:
+
+  - Definir la estructura mínima del documento (doctype, <html>, <head>, <body>).
+  - Cargar las metaetiquetas esenciales para accesibilidad, viewport y SEO básico.
+  - Incluir las fuentes externas utilizadas por la aplicación.
+  - Inyectar el componente raíz de Angular mediante la etiqueta <app-root>
+    (sustituida en tiempo de ejecución por el framework).
+  - Servir como contenedor sobre el cual Angular renderiza todo el contenido
+    de la aplicación usando su motor interno.
+
+  Este archivo es gestionado directamente por Angular CLI durante el proceso
+  de compilación y suele modificarse únicamente para personalizar metadatos,
+  títulos, iconos o recursos globales (favicon, fuentes, analytics, etc.).
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>TutorialAngular</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>

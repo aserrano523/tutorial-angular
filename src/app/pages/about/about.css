@@ -1,0 +1,79 @@
+/* ==========================================
+   about.css
+   Estilos locales específicos del componente About.
+   Esta página hereda estilos de:
+   - styles.css (template base Spurgeon)
+   - spurgeon-custom.css (overrides globales)
+========================================== */
+
+
+/* ==========================================
+   FOTO DE PERFIL - CONTENEDOR
+========================================== */
+
+.entry__cover--about {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Los márgenes superiores e inferiores se ajustarán en la parte final */
+}
+
+
+/* ==========================================
+   FOTO DE PERFIL - IMAGEN
+========================================== */
+
+.entry__cover--about img,
+.entry__cover.entry__cover--about img,
+.s-content .entry__cover--about img {
+    width: 220px !important;
+    height: 220px !important;
+    object-fit: cover !important;
+    border-radius: 50% !important;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-shadow: 0 6px 18px rgba(16,24,40,0.12) !important;
+    border: 6px solid rgba(255,255,255,0.9) !important;
+}
+
+@media (max-width: 520px) {
+    .entry__cover--about img {
+        width: 140px !important;
+        height: 140px !important;
+    }
+}
+
+
+/* ==========================================
+   AJUSTES DE LA CABECERA (HERO)
+   Estos estilos controlan la separación hacia arriba.
+========================================== */
+
+.s-pageheader--single .row {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+
+/* ==========================================
+   AJUSTAR EL PRIMER PÁRRAFO
+========================================== */
+
+.s-content .column .entry__section:first-of-type {
+    margin-top: 0 !important;
+}
+
+/* ==========================================
+   Eliminar el gran espacio debajo de la imagen
+   causado por el contenedor del artículo.
+========================================== */
+
+.s-content.s-content--single {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}

@@ -1,0 +1,46 @@
+/*
+  styles.css
+  Estilos globales de la aplicación Angular.
+  Define tipografía base y resets globales.
+*/
+
+/* Tamaño base de fuente - importante para escalabilidad */
+html {
+    font-size: 17px !important;
+}
+
+/* Body global - mantiene tipografía y espaciado */
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif !important;
+    font-size: 1rem !important;
+    line-height: 1.7 !important;
+    color: #222;
+    background: #fafafa;
+}
+
+/* Encabezados globales (será sobreescrito por spurgeon-custom.css con Poppins) */
+h1, h2, h3, h4, h5, h6 {
+    color: #111;
+}
+
+/* Barra superior estilo "índice" */
+.navbar {
+  background: white;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  gap: 20px;
+  position: sticky;  /* se queda fija arriba al hacer scroll */
+  top: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #1976d2;
+}
