@@ -290,7 +290,8 @@
                 <h3>2. Configuración de PowerShell para permitir scripts</h3>
 
                 <p>
-                    En algunos casos, Windows muestra un error cuando se intenta ejecutar comandos como 
+                    En cuanto a la parte de variables de entorno, en algunos casos se ha obervado que 
+                    Windows muestra un error cuando se intenta ejecutar comandos como 
                     <code>npm</code> o <code>ng</code> debido a la política de ejecución de PowerShell.  
                     Para solucionarlo, basta con ejecutar PowerShell <strong>como administrador</strong> e introducir:
                 </p>
@@ -300,6 +301,12 @@
                 <p>
                     Tras confirmar la operación, PowerShell permitirá ejecutar scripts necesarios para trabajar con 
                     Angular sin comprometer la seguridad del sistema.
+                </p>
+                
+                <p>
+                Llegados a este punto, conviene resaltar que Angular es exclusivamente un framework frontend, por lo 
+                que no depende de ninguna base de datos ni servidor para funcionar. Si una aplicación requiere datos 
+                dinámicos, estos se obtienen mediante APIs externas.
                 </p>
 
                 <h3>3. Instalación de Angular CLI</h3>
@@ -435,7 +442,7 @@
                         con entidades HTML.
                     </li>
                 </ul>
-
+                
                 <p>
                     Con estos pasos completados, el entorno queda totalmente preparado para comenzar a crear la estructura 
                     del proyecto, generar componentes, personalizar la plantilla y construir el tutorial completo. En la 
